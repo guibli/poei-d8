@@ -1,16 +1,16 @@
-uuid: c3c145f2-46f6-4480-b46c-ebcbbc4f4936
+uuid: bd8ee69f-0f2c-4184-8fd7-39e97fe3f967
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.body
-    - node.type.test_content_type_kwan
+    - node.type.restaurant
   module:
     - text
-id: node.test_content_type_kwan.body
+id: node.restaurant.body
 field_name: body
 entity_type: node
-bundle: test_content_type_kwan
+bundle: restaurant
 label: Body
 description: ''
 required: false

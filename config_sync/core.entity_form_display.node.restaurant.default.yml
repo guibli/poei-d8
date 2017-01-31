@@ -1,16 +1,20 @@
-uuid: fb5149dc-56d6-46f1-9ba0-59ee108e9450
+uuid: 939cd348-7327-4b20-93c6-da0c8bdb2f85
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.test_content_type_kwan.body
-    - node.type.test_content_type_kwan
+    - field.field.node.restaurant.body
+    - field.field.node.restaurant.field_restaurant_email
+    - field.field.node.restaurant.field_restaurant_photo
+    - image.style.thumbnail
+    - node.type.restaurant
   module:
+    - image
     - path
     - text
-id: node.test_content_type_kwan.default
+id: node.restaurant.default
 targetEntityType: node
-bundle: test_content_type_kwan
+bundle: restaurant
 mode: default
 content:
   body:
@@ -26,6 +30,20 @@ content:
     weight: 10
     settings: {  }
     third_party_settings: {  }
+  field_restaurant_email:
+    weight: 33
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+  field_restaurant_photo:
+    weight: 32
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
   path:
     type: path
     weight: 30
