@@ -1,17 +1,17 @@
-uuid: 24d85a54-8ea9-46bd-9437-7751ec83330d
+uuid: 28761c3f-a89e-4e3a-ac9b-7930fa5be87c
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.test_content_type_kwan.body
-    - node.type.test_content_type_kwan
+    - field.field.node.restaurant.body
+    - node.type.restaurant
   module:
     - text
     - user
-id: node.test_content_type_kwan.teaser
+id: node.restaurant.teaser
 targetEntityType: node
-bundle: test_content_type_kwan
+bundle: restaurant
 mode: teaser
 content:
   body:
