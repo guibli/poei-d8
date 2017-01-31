@@ -1,16 +1,16 @@
-uuid: dc787138-fc03-41ea-be61-b60585699725
+uuid: c3c145f2-46f6-4480-b46c-ebcbbc4f4936
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.body
-    - node.type.testcontent
+    - node.type.test_content_type_kwan
   module:
     - text
-id: node.testcontent.body
+id: node.test_content_type_kwan.body
 field_name: body
 entity_type: node
-bundle: testcontent
+bundle: test_content_type_kwan
 label: Body
 description: ''
 required: false
