@@ -1,16 +1,16 @@
-uuid: db48ef61-d19a-4ea1-95ea-6b29617db3ac
+uuid: 8c546ca2-e6f1-41a6-82a7-8be054b6fac9
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.testcontent.body
-    - node.type.testcontent
+    - field.field.node.test_content_type_kwan.body
+    - node.type.test_content_type_kwan
   module:
     - text
     - user
-id: node.testcontent.default
+id: node.test_content_type_kwan.default
 targetEntityType: node
-bundle: testcontent
+bundle: test_content_type_kwan
 mode: default
 content:
   body:

@@ -1,17 +1,17 @@
-uuid: f7993750-eaaa-4df7-8e9f-c011875906c5
+uuid: 24d85a54-8ea9-46bd-9437-7751ec83330d
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.testcontent.body
-    - node.type.testcontent
+    - field.field.node.test_content_type_kwan.body
+    - node.type.test_content_type_kwan
   module:
     - text
     - user
-id: node.testcontent.teaser
+id: node.test_content_type_kwan.teaser
 targetEntityType: node
-bundle: testcontent
+bundle: test_content_type_kwan
 mode: teaser
 content:
   body:
