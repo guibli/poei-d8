@@ -27,10 +27,11 @@ function mod_perso_help($route_name, RouteMatchInterface $route_match) {
  * Implements hook_theme().
  */
 function mod_perso_theme() {
-  return [
-    'mod_perso' => [
-      'template' => 'mod_perso',
-      'render element' => 'children',
-    ],
-  ];
-}
+    $theme['mod_perso'] = array(
+      'variables' => [
+        'toto' => null,
+        'tata' => null,
+      ],
+    );
+    return $theme;
+  }

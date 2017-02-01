@@ -1,0 +1,19 @@
+<?php
+function hello_help($route_name, \Drupal\Core\Routing\RouteMatchInterface $route_match){
+  switch ($route_name) {
+    case 'help.page.hello':
+      return'<p>Help page Hello module</p>';
+      break;
+    }
+}
+
+function hello_cron(){
+  drupal_set_message(t('mon message'),'error');
+}
+
+/**
+ * Implements hook_user_login().
+ */
+function hello_user_login($account){
+  drupal_set_message(t('Bienvenue cher ').$account->getDisplayName());
+}

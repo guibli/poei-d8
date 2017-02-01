@@ -24,5 +24,5 @@ function custom_drush_command_drush_command() {
  *   drush_{module_name}_{item_id_for_command}()
  */
 function drush_custom_drush_command_say_hello($name = '') {
-  drush_print('Hello ' . $name . ' !');
+  \Drupal::service('mod_perso.premierservice')->premiereFunction('TOTO');
 }
