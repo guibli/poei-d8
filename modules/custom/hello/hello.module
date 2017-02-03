@@ -18,3 +18,4 @@ function hello_user_login($account){
   $name = $account->getDisplayName();
   drupal_set_message(t('Welcome dear @name',array('@name'=>$name)));
 }
+

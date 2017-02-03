@@ -12,3 +12,10 @@ hello.rss:
     _controller:  '\Drupal\hello\Controller\HelloControllerRss::content'
   requirements:
     _access: 'TRUE'
+hello.listenoeud:
+  path: '/hello/liste-noeud/{entitytype}'
+  defaults:
+    _controller:  '\Drupal\hello\Controller\HelloControllerListeNoeud::content'
+    entitytype: ''
+  requirements:
+      _access: 'TRUE'
