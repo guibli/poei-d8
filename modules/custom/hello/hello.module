@@ -15,5 +15,6 @@ function hello_cron(){
  * Implements hook_user_login().
  */
 function hello_user_login($account){
-  drupal_set_message(t('Bienvenue cher ').$account->getDisplayName());
+  $name = $account->getDisplayName();
+  drupal_set_message(t('Welcome dear @name',array('@name'=>$name)));
 }
