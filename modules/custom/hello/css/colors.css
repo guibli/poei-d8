@@ -1,9 +1,9 @@
-.blue-class{
+#sidebar-first .blue-class{
     background-color: blue;
 }
-.orange-class{
-    background-color:orange ;
+#sidebar-first .orange-class{
+    background-color: orange ;
 }
-.green-class{
-    background: green;
+#sidebar-first .green-class{
+    background-color: green;
 }

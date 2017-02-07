@@ -32,8 +32,8 @@ function hello_node_update(Drupal\Core\Entity\EntityInterface $entity)
   $query->execute();
 }
 
-function hello_page_attachements(array &$page){
-  $page["#attached"]['library'][]='hello/blockcolor';
+function hello_page_attachments(array &$attachments) {
+  $attachments['#attached']['library'][] = 'hello/blockcolor';
 }
 
 /**
@@ -42,5 +42,23 @@ function hello_page_attachements(array &$page){
 function hello_preprocess_block(&$vars){
   $config = \Drupal::config( 'hello.config');
   $color = $config->get('color');
-  $vars['attributes']['class'][] = $color['color_select'];
+
+  $vars['attributes']['class'][] = (is_array($color)?$color['color_select']:$color);
+}
+
+/**
+ * Implements hook_theme().
+ */
+function hello_theme($existing, $type, $theme, $path)
+{
+  return array(
+    'hello' => array(
+      'template' => 'hello-list-update',
+      'variables'=> array(
+        'node_title'=> NULL,
+        'string_count'=> NULL,
+        'node_type' => NULL
+      )
+    )
+  );
 }

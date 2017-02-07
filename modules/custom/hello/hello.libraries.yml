@@ -2,4 +2,4 @@ blockcolor:
   version: VERSION
   css:
     theme:
-      css/colors.css:{}
+      css/colors.css: {}
