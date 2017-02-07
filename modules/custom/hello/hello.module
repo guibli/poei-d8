@@ -19,3 +19,28 @@ function hello_user_login($account){
   drupal_set_message(t('Welcome dear @name',array('@name'=>$name)));
 }
 
+function hello_node_update(Drupal\Core\Entity\EntityInterface $entity)
+{
+  // Update the entity's entry in a fictional table of all entities.
+
+  $query = \Drupal::database()->insert('hello_node_history');
+  $query->fields([
+    'nid' => $entity->id(),
+    'update_time' => time(),
+    'uid'=> \Drupal::currentUser()->id()
+  ]);
+  $query->execute();
+}
+
+function hello_page_attachements(array &$page){
+  $page["#attached"]['library'][]='hello/blockcolor';
+}
+
+/**
+ * Implements module_preprocess_HOOK().
+ */
+function hello_preprocess_block(&$vars){
+  $config = \Drupal::config( 'hello.config');
+  $color = $config->get('color');
+  $vars['attributes']['class'][] = $color['color_select'];
+}

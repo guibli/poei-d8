@@ -37,6 +37,7 @@
   ]
 %}
 <div{{ attributes.addClass(classes) }}>
+    {{ kint(block.content) }}
   {{ title_prefix }}
   {% if label %}
     <h2{{ title_attributes }}>{{ label }}</h2>

@@ -19,3 +19,24 @@ hello.listenoeud:
     entitytype: ''
   requirements:
       _access: 'TRUE'
+hello.lastupdate:
+  path: '/node/{node}/lastupdate'
+  defaults:
+    _controller: '\Drupal\hello\Controller\HelloControllerLastUpdate::content'
+    _title_callback: '\Drupal\hello\Controller\HelloControllerLastUpdate::newtitle'
+  requirements:
+    _permission: 'access content'
+calculator.form:
+  path: '/hello/calculator'
+  defaults:
+    _form: '\Drupal\hello\Form\HelloFormCalculator'
+    _title: 'calculator!'
+  requirements:
+      _access: 'TRUE'
+blockcolor.form:
+  path: '/admin/appearance/blockcolor'
+  defaults:
+    _form: '\Drupal\hello\Form\HelloFormBlockcolor'
+    _title: 'Couleur des blocks'
+  requirements:
+      _access: 'TRUE'
