@@ -6,12 +6,14 @@ hello.hello:
     testparam: 'HELLO'
   requirements:
     _access:  'TRUE'
+
 hello.rss:
   path: '/hello-rss'
   defaults:
     _controller:  '\Drupal\hello\Controller\HelloControllerRss::content'
   requirements:
     _access: 'TRUE'
+
 hello.listenoeud:
   path: '/hello/liste-noeud/{entitytype}'
   defaults:
@@ -19,6 +21,7 @@ hello.listenoeud:
     entitytype: ''
   requirements:
       _access: 'TRUE'
+
 hello.lastupdate:
   path: '/node/{node}/lastupdate'
   defaults:
@@ -26,17 +29,27 @@ hello.lastupdate:
     _title_callback: '\Drupal\hello\Controller\HelloControllerLastUpdate::newtitle'
   requirements:
     _permission: 'access content'
+
 calculator.form:
   path: '/hello/calculator'
   defaults:
     _form: '\Drupal\hello\Form\HelloFormCalculator'
     _title: 'calculator!'
   requirements:
-      _access: 'TRUE'
+    _permission: 'hello permission'
+
 blockcolor.form:
   path: '/admin/appearance/blockcolor'
   defaults:
     _form: '\Drupal\hello\Form\HelloFormBlockcolor'
     _title: 'Couleur des blocks'
   requirements:
-      _access: 'TRUE'
+    _permission: 'administer hello'
+
+olduser.access:
+  path: '/helloaccess/olduser'
+  defaults:
+    _controller: '\Drupal\hello\Controller\HelloAccessController::content'
+    _title: 'Hello access'
+  requirements:
+    _olduser_access: '48'

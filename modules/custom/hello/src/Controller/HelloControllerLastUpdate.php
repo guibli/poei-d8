@@ -63,19 +63,19 @@ class HelloControllerLastUpdate extends ControllerBase
     $node = $this->entityTypeManager->getStorage('node')->load($nid);
 
     //get count
-    $count_update = \Drupal::database()
+    /*$count_update = \Drupal::database()
       ->select('hello_node_history','nfh')
       ->condition('nid', $nid)
       ->countQuery()
       ->execute();
 
-    $count = $count_update->fetchField();
+    $count = $count_update->fetchField();*/
 
     $render[] = array(
       '#theme' => 'hello',
       '#node_title' => $node->getTitle(),
       '#node_type'=>$node->bundle(),
-      '#string_count' =>$count,
+      '#string_count' =>count($result_parsed),
     );
     $render[] = array(
       '#type' => 'table',

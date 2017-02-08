@@ -1,0 +1,9 @@
+color:
+  color_select: orange-class
+  submit: 'Save configuration'
+  form_build_id: form-R45DrK1UKwkSg0afgphNnP8mLVD35HxRs-x93HX0H6w
+  form_token: DNly9j_9ImtaJvHznQNMjvmQAjXVQ3dRYwNgEAcnne0
+  form_id: hello_admin_form
+  op: 'Save configuration'
+_core:
+  default_config_hash: T0_5dDzJDYbCDNyp6TInm8xvT7dNrOwhXBrOTFiWrO4
