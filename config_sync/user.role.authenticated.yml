@@ -17,3 +17,5 @@ permissions:
   - 'access site-wide contact form'
   - 'access shortcuts'
   - 'search content'
+  - 'hello permission'
+  - 'administer hello'
