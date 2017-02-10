@@ -45,4 +45,3 @@ annonce.settings:
    _title: 'Annonce Settings'
   requirements:
     _permission: 'administer Annonce entity'
-
