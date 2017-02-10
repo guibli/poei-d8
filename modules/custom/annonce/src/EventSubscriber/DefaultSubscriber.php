@@ -51,15 +51,14 @@ class DefaultSubscriber implements EventSubscriberInterface {
    */
   public function kernel_request(Event $event) {
 
-    if($this->currentRoute->getMasterRouteMatch()->getRouteName()=='entity.annonce.canonical'){
+    if($this->currentRoute->getMasterRouteMatch()->getRouteName()=='entity.annonce.canonical' ){
       drupal_set_message('Events register for '.$this->currentUser->getDisplayName(), 'status', TRUE);
 
-      $parambags = $this->currentRoute->getParameters();
-      $entity = $parambags->getIterator()->current();
+      $entity = $this->currentRoute->getParameter('annonce');
 
       $this->dataBase->upsert('annonce_history')
-        ->fields(['hid','uid','nid'])
-        ->values([$this->currentUser->getAccount()->id(). $entity->id(),$this->currentUser->getAccount()->id(),$entity->id()])
+        ->fields(['hid','uid','nid','update_time'])
+        ->values([$this->currentUser->getAccount()->id(). $entity->uuid(),$this->currentUser->getAccount()->id(),$entity->id(),time()])
         ->key('hid')->execute();
     }
   }
