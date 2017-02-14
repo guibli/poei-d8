@@ -80,11 +80,3 @@ function hello_form_contact_message_feedback_form_alter(&$form, \Drupal\Core\For
   $form['subject']['#access']=false;
 
 }
-
-function hello_mail_alter(&$message) {
-  /*var_dump($message);die;
-  if ($message['id'] == 'contact_page_mail') {
-    $message['body'][] = "--\nMail sent out from " . \Drupal::config('system.site')->get('name');
-  }*/
-
-}

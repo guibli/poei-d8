@@ -18,8 +18,6 @@ function poei_help($route_name, RouteMatchInterface $route_match) {
       $output .= '<h3>' . t('About') . '</h3>';
       $output .= '<p>' . t('My Awesome Module') . '</p>';
       return $output;
-
-    default:
   }
 }
 

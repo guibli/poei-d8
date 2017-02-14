@@ -19,12 +19,11 @@ use Drupal\Core\Render\Element;
  *   - elements: An associative array containing the user information and any
  *   - attributes: HTML attributes for the containing element.
  */
-function template_preprocess_offre_entity(array &$variables) {
+function template_preprocess_annonce(array &$variables) {
   // Fetch OffreEntity Entity Object.
-  $offre_entity = $variables['elements']['#offre_entity'];
-
   // Helpful $content variable for templates.
   foreach (Element::children($variables['elements']) as $key) {
     $variables['content'][$key] = $variables['elements'][$key];
   }
+
 }

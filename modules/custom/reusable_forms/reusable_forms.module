@@ -89,7 +89,7 @@ function reusable_forms_entity_extra_field_info() {
 /**
  * Implements hook_ENTITY_TYPE_view().
  */
-function reusable_forms_node_view(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode, $langcode) {
+function reusable_forms_node_view(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode, $langcode='') {
   if (!$display->getComponent('reusable_form')) {
     return;
   }
