@@ -1,26 +1,25 @@
 <?php
-
+use Drupal\Core\Database\Database;
 function email_form_schema(){
   $schema['email_form'] = array(
-    'description' => 'Stores article subscriptions.',
+    'description' => 'email_form',
     'fields' => array(
       'hid' => array(
-        'description' => 'Primary Key: Unique history ID.',
+        'description' => 'Primary Key',
         'type'        => 'serial',
         'unsigned'    => TRUE,
         'not null'    => TRUE,
       ),
       'nid' => array(
-        'description' => 'Article ID.',
+        'description' => 'Node ID.',
         'type'        => 'int',
         'unsigned'    => TRUE,
         'not null'    => TRUE,
       ),
       'email' => array(
-        'description' => 'email.',
-        'type'        => 'varchar',
-        'unsigned'    => TRUE,
-        'not null'    => TRUE,
+        'description' => 'usermail',
+        'length' => 255,
+        'type'        => 'varchar'
       ),
     ),
     'primary key' => array('hid'),

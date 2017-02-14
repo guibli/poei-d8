@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="edaa7cb6-f9f3-45bc-a9f3-7da316f6ef8e" name="z" url="http://localhost">
+        <fileTransfer port="0" mountedRoot="Z:\htdocs\drupaldev" accessType="MOUNT" />
+      </webServer>
+    </option>
+  </component>
+</project>

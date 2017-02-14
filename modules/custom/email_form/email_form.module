@@ -15,7 +15,6 @@ function email_form_mail($key,&$message,$param){
 
 function email_form_node_update(Drupal\Core\Entity\EntityInterface $entity)
 {
-
   if($entity->bundle()=='article') {
     $mailManager = \Drupal::service('plugin.manager.mail');
     //Check for subscriber
@@ -26,7 +25,7 @@ function email_form_node_update(Drupal\Core\Entity\EntityInterface $entity)
       ->execute();
 
     $result = $query->fetchAll();
-
+;
     $options = ['absolute' => TRUE];
     $url = \Drupal\Core\Url::fromRoute('entity.node.canonical', ['node' => $entity->id()],$options);
     $url = $url->toString();
