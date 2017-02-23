@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains custom_override.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function custom_override_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the custom_override module.
+    case 'help.page.custom_override':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('custom Override') . '</p>';
+      return $output;
+
+    default:
+  }
+}

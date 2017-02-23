@@ -25,7 +25,7 @@ function email_form_node_update(Drupal\Core\Entity\EntityInterface $entity)
       ->execute();
 
     $result = $query->fetchAll();
-;
+
     $options = ['absolute' => TRUE];
     $url = \Drupal\Core\Url::fromRoute('entity.node.canonical', ['node' => $entity->id()],$options);
     $url = $url->toString();
