@@ -27,7 +27,6 @@ module:
   dynamic_page_cache: 0
   editor: 0
   email_form: 0
-  feature_article: 0
   feeds: 0
   field: 0
   field_ui: 0
