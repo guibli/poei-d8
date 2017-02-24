@@ -28,8 +28,6 @@ module:
   editor: 0
   email_form: 0
   feature_article: 0
-  features: 0
-  features_ui: 0
   feeds: 0
   field: 0
   field_ui: 0
