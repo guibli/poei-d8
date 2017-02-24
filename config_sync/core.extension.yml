@@ -19,7 +19,6 @@ module:
   contact: 0
   contextual: 0
   custom_drush_command: 0
-  custom_override: 0
   datetime: 0
   dblog: 0
   devel: 0
@@ -27,7 +26,6 @@ module:
   dynamic_page_cache: 0
   editor: 0
   email_form: 0
-  feature_article: 0
   feeds: 0
   field: 0
   field_ui: 0
