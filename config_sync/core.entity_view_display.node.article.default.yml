@@ -45,6 +45,7 @@ content:
   reusable_form:
     weight: 100
 hidden:
+  field_ffff: true
   field_image: true
   field_tags: true
   langcode: true
