@@ -19,7 +19,6 @@ module:
   contact: 0
   contextual: 0
   custom_drush_command: 0
-  custom_override: 0
   datetime: 0
   dblog: 0
   devel: 0
